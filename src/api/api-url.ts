@@ -9,10 +9,10 @@ export const ENDPOINTS = {
   },
   DETECTIONS: {
     STREAM_DETECTIONS: (videoId: string) =>
-      `${wsApiUrl}/ws/detectViolation/${videoId}`,
+      `${wsApiUrl}/wss/detectViolation/${videoId}`,
     STREAM_VIOLATIONS: (videoId: string) =>
-      `${wsApiUrl}/ws/streamViolation/${videoId}`,
-    RTSP_STREAM: () => `${wsApiUrl}/ws/rtspStream`,
+      `${wsApiUrl}/wss/streamViolation/${videoId}`,
+    RTSP_STREAM: () => `${wsApiUrl}/wss/rtspStream`,
   },
   VIOLATIONS: {
     GET: (videoId: string) => `${apiUrl}/violations/${videoId}`,
