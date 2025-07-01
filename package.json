@@ -5,13 +5,18 @@
   "scripts": {
     "dev": "vite --port 3000",
     "start": "vite --port 3000",
-    "build": "vite build && tsc",
+    "build": "npm install --legacy-peer-deps && vite build && tsc",
     "serve": "vite preview",
     "test": "vitest run",
     "lint": "eslint",
     "format": "prettier",
     "check": "prettier --write . && eslint --fix",
     "routes": "bunx @tanstack/router-cli generate"
+  },
+  "overrides": {
+    "react-day-picker": {
+      "date-fns": "$date-fns"
+    }
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
